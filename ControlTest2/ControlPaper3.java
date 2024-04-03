@@ -10,22 +10,24 @@ public class ControlPaper3 {
             arr[i] = new Scanner(System.in).nextInt();
         }
         Arrays.sort(arr);
-        int k =1;
-        for (int i = 0; i < arr.length-1; i++) {
-
-            if (arr[i] == arr[i+1]){
-                k++;
+        int l = 1;
+        int index=0;
+        for (int i = 0; i < arr.length; i++) {
+            int k = 0;
+            for (int j = 0; j < arr.length; j++) {
+                if (arr[i] == arr[j])
+                    k++;
             }
-
-            else{
-                k=1;
+            if (k > l) {
+                l = k;
+                index = i;
             }
-
-            if (k>=(n/2)){
-                System.out.println(arr[i]);
-                break;
+            if (l > (arr.length/2)){
+                System.out.println(arr[index]);
+                System.exit(0);
             }
         }
+        System.out.println("-1");
 
     }
 }
