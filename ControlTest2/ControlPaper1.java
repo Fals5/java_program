@@ -8,7 +8,7 @@ public class ControlPaper1 {
         System.out.println("Введите needle:");
         String needle = new Scanner(System.in).nextLine();
 
-        for (int i = 0; i <= haystack.length(); i++) {
+        for (int i = 0; i <= haystack.length()-1; i++) {
             if (haystack.charAt(i) == needle.charAt(0))
                 if (haystack.substring(i, needle.length()+i).equals(needle)) {
                     System.out.println(i);
