@@ -11,6 +11,7 @@ public class ControlPaper5 {
             System.out.println("Введите число:");
             numbs[i] = new Scanner(System.in).nextInt();
         }
+        Arrays.sort(numbs);
         ArrayList <Integer> arr = new ArrayList<>();
         ArrayList <Integer> arr2 = new ArrayList<>();
         for (int x : numbs){
@@ -19,7 +20,7 @@ public class ControlPaper5 {
             }
         }
 
-        for (int i = 0; i < numbs.length; i++) {
+        for (int i = 1; i < numbs[numbs.length-1]; i++) {
             if(!arr.contains(i)){
                 arr2.add(i);
             }
